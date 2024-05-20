@@ -10,7 +10,7 @@ const Task = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("/api/task", {
+      const response = await fetch("/api/api/task", {
         headers: {
           authorization: `bearer ${user.token}`,
         },

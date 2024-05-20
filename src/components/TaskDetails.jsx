@@ -6,7 +6,7 @@ const TaskDetails = ({ task }) => {
   const { user } = useAuthContext();
 
   const handleDelete = async () => {
-    const response = await fetch("/api/task/" + task._id, {
+    const response = await fetch("/api/api/task/" + task._id, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${user.token}`,

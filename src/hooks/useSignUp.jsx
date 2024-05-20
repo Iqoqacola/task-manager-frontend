@@ -10,7 +10,7 @@ export const useSignUp = () => {
     setError(null);
     setSuccess(null);
 
-    const response = await fetch("/api/user/signup", {
+    const response = await fetch("/api/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
