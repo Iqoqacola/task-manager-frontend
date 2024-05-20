@@ -21,7 +21,7 @@ const Task = () => {
     };
 
     getData();
-  }, [dispatch]);
+  }, [dispatch, user]);
 
   return (
     <div className="pageTask">
