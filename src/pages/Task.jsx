@@ -10,11 +10,14 @@ const Task = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("/api/api/task", {
-        headers: {
-          authorization: `bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URI}/api/task`,
+        {
+          headers: {
+            authorization: `bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
 
       dispatch({ type: "SET_TASK", payload: json });

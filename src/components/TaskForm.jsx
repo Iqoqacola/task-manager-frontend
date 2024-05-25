@@ -23,14 +23,17 @@ const TaskhtmlForm = () => {
     const task = { subject, desc, group, due };
     // console.log(group);
 
-    const response = await fetch("/api/api/task", {
-      method: "POST",
-      body: JSON.stringify(task),
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_BACKEND_URI}/api/task`,
+      {
+        method: "POST",
+        body: JSON.stringify(task),
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `bearer ${user.token}`,
+        },
+      }
+    );
 
     const json = await response.json();
 
