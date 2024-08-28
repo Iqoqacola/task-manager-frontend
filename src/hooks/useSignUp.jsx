@@ -11,7 +11,7 @@ export const useSignUp = () => {
     setSuccess(null);
 
     const response = await fetch(
-      `${process.env.REACT_APP_BACKEND_URI}/api/api/user/signup`,
+      `${process.env.REACT_APP_BACKEND_URI}/api/user/signup`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -23,6 +23,7 @@ export const useSignUp = () => {
     if (!response.ok) {
       setIsLoading(false);
       setError(json.error);
+      console.log(json.error);
     }
 
     if (response.ok) {

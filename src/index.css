@@ -103,6 +103,8 @@ header a {
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -230,4 +232,37 @@ form.signup > button {
 p > a {
   text-decoration: none;
   color: var(--primary);
+}
+
+@media only screen and (max-width: 600px) {
+  div.account > p {
+    display: none;
+  }
+
+  div.navbar {
+  gap: 15px;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageTask {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  .pageTask {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
 }
